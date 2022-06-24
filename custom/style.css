@@ -217,5 +217,6 @@ a:active, a:visited, a:focus {
   font-size: 21px;
   color: #000;
   font-weight: 400;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
