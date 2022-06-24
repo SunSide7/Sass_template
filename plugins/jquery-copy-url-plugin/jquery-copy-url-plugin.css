@@ -1,0 +1,24 @@
+#copy-url-message {
+    padding: 21px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    border: 1px solid blue;
+    background: #fff;
+
+    transition: all .35s ease-in-out;
+}
+
+#copy-url-message.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#copy-url-message:not(.active) {
+    transition: all .75s ease-in-out;
+    
+    transform: translateY(-400px);
+    opacity: 0;
+}

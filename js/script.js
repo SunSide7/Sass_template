@@ -22,11 +22,13 @@ $('.wrapper input').change(function() {
     resultStringified_2 = result.join('/');
 
     const $template = `
-    <div class="result-string">${resultStringified_1}</div>
+    <div class="result-string copyToClipBoardBtn">${resultStringified_1}</div>
     <br>
     <br>
-    <div class="result-string">${resultStringified_2}</div>
+    <div class="result-string copyToClipBoardBtn">${resultStringified_2}</div>
     `
     
     $('.result').append($template)
+
+    $('.copyToClipBoardBtn').copyUrlOnClick(true, 'Ссылка скопирована!');
 })
