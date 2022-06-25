@@ -30,7 +30,7 @@ $('.wrapper input').change(function() {
     
     $('.result').append($template)
 
-    // $('.copyToClipBoardBtn').copyUrlOnClick(false, 'Ссылка скопирована!');
+    $('.copyToClipBoardBtn').copyUrlOnClick(false, 'Ссылка скопирована!');
 
     event.target.value = '';
 })
