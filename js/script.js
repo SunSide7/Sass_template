@@ -22,15 +22,23 @@ $('.wrapper input').change(function() {
     resultStringified_2 = result.join('/');
 
     const $template = `
-    <div class="result-string copyToClipBoardBtn">${resultStringified_1}</div>
+    <div class="result-string copyToClipBoardBtn">/${resultStringified_1}</div>
     <br>
     <br>
-    <div class="result-string copyToClipBoardBtn">${resultStringified_2}</div>
+    <div class="result-string copyToClipBoardBtn">/${resultStringified_2}</div>
     `
     
     $('.result').append($template)
 
-    $('.copyToClipBoardBtn').copyUrlOnClick(false, 'Ссылка скопирована!');
+    $('.copyToClipBoardBtn').each(function(index) {
+
+        if (index === 0) keyCode = 'Digit1';
+        if (index === 1) keyCode = 'Digit4';
+        
+        $(this).copyUrlOnClick(false, 'Ссылка скопирована!', keyCode);
+    })
 
     event.target.value = '';
+
+    $(this)[0].blur()
 })
