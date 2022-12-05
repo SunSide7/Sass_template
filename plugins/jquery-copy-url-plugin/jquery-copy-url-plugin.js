@@ -1,24 +1,24 @@
-$.fn.copyUrlOnClick = function(showMessage = true, message = 'COPY SUCCEED!', keyCode, hideMessageTimeout = 5000) {
+$.fn.copyUrlOnClick = function(
+    showMessage = true, 
+    message = 'COPY SUCCEED!', 
+    keyCode, 
+    hideMessageTimeout = 5000
+) {
     const copyUrlBtn = $(this)[0];
-    const $messageTemplate = `
-        <div id="copy-url-message">
-            ${message}
-        </div>
-    `;
+    const $template = `<div id="copy-url-message">${message}</div>`;
+    const _this = $(this);
 
-    showMessage &&
-        $('body').append($messageTemplate);
+    if (showMessage) 
+        $('body').append($template);
     
     if (copyUrlBtn) {
-        $(this).click(function() {
-            // window.navigator.clipboard.writeText(window.location.href);
-            window.navigator.clipboard.writeText(event.target.textContent);
+        $(this).click(function(e) {
+            window.navigator.clipboard.writeText(e.target.textContent);
 
             if (showMessage) {
 
                 // SHOW MESSAGE
                 $('#copy-url-message').addClass('active')
-                
     
                 // HIDE MESSAGE
                 setTimeout(() => {
@@ -27,8 +27,6 @@ $.fn.copyUrlOnClick = function(showMessage = true, message = 'COPY SUCCEED!', ke
 
             }
         });
-        
-        const _this = $(this);
 
         $(document)[0].addEventListener('keydown', event => {
             if (event.code === keyCode)

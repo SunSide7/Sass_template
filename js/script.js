@@ -6,6 +6,8 @@ $('.wrapper input').change(function() {
 
     const result = []
     const resultStringArray = event.target.value.split('\\');
+    // PHP STORM EDIT
+    // const resultStringArray = event.target.value.split('/');
     
     resultStringArray.forEach((stringItem, index) => {
         
