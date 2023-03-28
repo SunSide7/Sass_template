@@ -10,7 +10,9 @@ body {
   font-family: sans-serif;
 }
 
-body.darken-theme {
+body.darken-theme,
+body.darken-theme_low-contrast,
+body.darken-theme_blue-border {
   background: #212733;
 }
 
@@ -70,16 +72,42 @@ a:active, a:visited, a:focus {
   color: rgba(0, 0, 255, 0.35);
 }
 
-.darken-theme .wrapper {
+.darken-theme_low-contrast .wrapper {
   border: 1px solid #B3B5B9;
 }
 
-.darken-theme .wrapper input {
+.darken-theme_low-contrast .wrapper input {
   border: 1px solid #B3B5B9;
   background: #212733;
 }
 
-.darken-theme .wrapper .result {
+.darken-theme_low-contrast .wrapper .result {
   border: 1px solid #B3B5B9;
+}
+
+.darken-theme .wrapper {
+  border: 1px solid #fff;
+}
+
+.darken-theme .wrapper input {
+  border: 1px solid #fff;
+  background: #212733;
+}
+
+.darken-theme .wrapper .result {
+  border: 1px solid #fff;
+}
+
+.darken-theme_blue-border .wrapper {
+  border: 1px solid #fff;
+}
+
+.darken-theme_blue-border .wrapper input {
+  border: 1px solid blue;
+  background: #212733;
+}
+
+.darken-theme_blue-border .wrapper .result {
+  border: 1px solid blue;
 }
 /*# sourceMappingURL=style.css.map */

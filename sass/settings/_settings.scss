@@ -10,7 +10,10 @@ body {
     font-family: sans-serif;
 }
 
-body.darken-theme {
+body.darken-theme,
+body.darken-theme_low-contrast,
+body.darken-theme_blue-border
+ {
     background: #212733;
 }
 

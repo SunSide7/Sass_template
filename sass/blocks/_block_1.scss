@@ -40,7 +40,9 @@
 
 
 }
-.darken-theme .wrapper {
+
+
+.darken-theme_low-contrast .wrapper {
     
     // border: 1px solid #fff;
     border: 1px solid #B3B5B9;
@@ -57,3 +59,34 @@
         border: 1px solid #B3B5B9;
     }
 }
+
+.darken-theme .wrapper {
+    
+    border: 1px solid #fff;
+
+    & input {
+        border: 1px solid #fff;
+
+        background: #212733;
+    }
+
+    .result {
+        border: 1px solid #fff;
+    }
+}
+
+.darken-theme_blue-border .wrapper {
+    
+    border: 1px solid #fff;
+
+    & input {
+        border: 1px solid blue;
+
+        background: #212733;
+    }
+
+    .result {
+        border: 1px solid blue;
+    }
+}
+
