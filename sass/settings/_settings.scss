@@ -8,9 +8,13 @@ body {
 
 body {
     font-family: sans-serif;
+}
+
+body.darken-theme {
     background: #212733;
 }
-body * {
+
+body.darken-theme * {
     color: #fff !important;
 }
 

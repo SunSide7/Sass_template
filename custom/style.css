@@ -8,10 +8,13 @@ body {
 
 body {
   font-family: sans-serif;
+}
+
+body.darken-theme {
   background: #212733;
 }
 
-body * {
+body.darken-theme * {
   color: #fff !important;
 }
 
@@ -40,20 +43,18 @@ a:active, a:visited, a:focus {
   padding: 21px;
   margin-top: 21px;
   height: 400px;
-  border: 1px solid #B3B5B9;
+  border: 1px solid blue;
 }
 
 .wrapper input {
   width: 100%;
   font-size: 21px;
-  background: #212733;
-  border: 1px solid #B3B5B9;
 }
 
 .wrapper .result {
   min-height: 285px;
   padding-top: 21px;
-  border: 1px solid #B3B5B9;
+  border: 1px solid blue;
   margin-top: 21px;
 }
 
@@ -67,5 +68,18 @@ a:active, a:visited, a:focus {
 
 .wrapper .result-string:active {
   color: rgba(0, 0, 255, 0.35);
+}
+
+.darken-theme .wrapper {
+  border: 1px solid #B3B5B9;
+}
+
+.darken-theme .wrapper input {
+  border: 1px solid #B3B5B9;
+  background: #212733;
+}
+
+.darken-theme .wrapper .result {
+  border: 1px solid #B3B5B9;
 }
 /*# sourceMappingURL=style.css.map */
