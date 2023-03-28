@@ -1,5 +1,13 @@
 // C:\Users\User\OneDrive\Рабочий стол\prepare path project\js\script.js
 
+// CHECK THEME COLOR
+const $theme = 'darken-theme';
+
+$('body').addClass($theme);
+
+
+
+
 $('.wrapper input').change(function() {
     console.log('CHANGE');
     console.log('EVENT TARGET VALUE:', event.target.value);
