@@ -3,7 +3,8 @@
 // CHECK THEME COLOR
 const $theme = 'darken-theme';
 
-$('body').addClass($theme);
+if ($theme)
+    $('body').addClass($theme);
 
 
 
