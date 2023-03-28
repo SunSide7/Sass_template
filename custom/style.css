@@ -8,6 +8,11 @@ body {
 
 body {
   font-family: sans-serif;
+  background: #212733;
+}
+
+body * {
+  color: #fff !important;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -35,18 +40,20 @@ a:active, a:visited, a:focus {
   padding: 21px;
   margin-top: 21px;
   height: 400px;
-  border: 1px solid blue;
+  border: 1px solid #B3B5B9;
 }
 
 .wrapper input {
   width: 100%;
   font-size: 21px;
+  background: #212733;
+  border: 1px solid #B3B5B9;
 }
 
 .wrapper .result {
   min-height: 285px;
   padding-top: 21px;
-  border: 1px solid blue;
+  border: 1px solid #B3B5B9;
   margin-top: 21px;
 }
 

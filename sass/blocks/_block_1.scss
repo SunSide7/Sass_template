@@ -5,11 +5,18 @@
     margin-top: 21px;
 
     height: 400px;
-    border: 1px solid blue;
+    // border: 1px solid blue;
+    // border: 1px solid #fff;
+    border: 1px solid #B3B5B9;
 
     & input {
         width: 100%;
         font-size: 21px;
+
+        background: #212733;
+
+        // border: 1px solid #fff;
+        border: 1px solid #B3B5B9;
     }
 
     .result {
@@ -19,7 +26,9 @@
         // padding-left: 14px;
         // padding-left: 24px;
 
-        border: 1px solid blue;
+        // border: 1px solid blue;
+        // border: 1px solid #fff;
+        border: 1px solid #B3B5B9;
         // margin-top: 40px;
         margin-top: 21px;
 
