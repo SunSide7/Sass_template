@@ -1,13 +1,13 @@
 // C:\Users\User\OneDrive\Рабочий стол\prepare path project\js\script.js
 
 // CHECK THEME COLOR
-const $theme = 
+// const $theme = 
     // 'darken-theme';
-    'darken-theme_blue-border';
+    // 'darken-theme_blue-border';
     // 'darken-theme_low-contrast';
 
-if ($theme)
-    $('body').addClass($theme);
+// if ($theme)
+    // $('body').addClass($theme);
 
 
 
