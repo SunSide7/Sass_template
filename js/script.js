@@ -12,7 +12,8 @@
 
 
 
-$('.wrapper input').change(function() {
+// $('.wrapper input').change(function() {
+$('.wrapper input')[0].addEventListener('input', function () {
     console.log('CHANGE');
     console.log('EVENT TARGET VALUE:', event.target.value);
 
