@@ -9,18 +9,33 @@
 // if ($theme)
     // $('body').addClass($theme);
 
+let standardMode = null;
+switch (editorType) {
+    case 'PHP_STORM':
+        standardMode = false;
+        break;
 
+    
+    case 'VSCODE':
+        standardMode = true;
+        
+        break;
 
+    
 
-// $('.wrapper input').change(function() {
+    default:
+        break;
+}
+
 $('.wrapper input')[0].addEventListener('input', function () {
-    console.log('CHANGE');
-    console.log('EVENT TARGET VALUE:', event.target.value);
 
     const result = []
-    const resultStringArray = event.target.value.split('\\');
-    // PHP STORM EDIT
-    // const resultStringArray = event.target.value.split('/');
+    if (standardMode) {
+        const resultStringArray = event.target.value.split('\\');
+    } else {
+        // PHP STORM EDIT
+        const resultStringArray = event.target.value.split('/');
+    }
     
     resultStringArray.forEach((stringItem, index) => {
         
@@ -36,27 +51,13 @@ $('.wrapper input')[0].addEventListener('input', function () {
     resultStringified_1 = result.join('\\');
     resultStringified_2 = result.join('/');
 
-    // const $template = `
-    // <div class="result-string copyToClipBoardBtn">/${resultStringified_1}</div>
-    // <br>
-    // <br>
-    // <div class="result-string copyToClipBoardBtn">/${resultStringified_2}</div>
-    // `;
-
     const $template = `<div class="result-string copyToClipBoardBtn">/${resultStringified_2}</div>`;
-
-    
     
     $('.result').append($template)
 
     $('.copyToClipBoardBtn').each(function(index) {
 
-        // if (index === 0) keyCode = 'Digit1';
-        // if (index === 1) keyCode = 'Digit4';
-
         if (index === 0) keyCode = 'Digit4';
-
-        
         
         $(this).copyUrlOnClick(false, 'Ссылка скопирована!', keyCode);
     })
@@ -76,7 +77,6 @@ $(document).ready(function() {
 
     document.onkeyup = function (e) {
         if (e.which == 82) {
-            // if (e.ctrlKey && e.shiftKey && e.which == 70) {
             setTimeout(function () {
                 location.reload();
             }, 10);
